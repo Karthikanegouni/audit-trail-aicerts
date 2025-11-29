@@ -1,0 +1,29 @@
+### GET all versions
+GET http://localhost:5000/versions
+Content-Type: application/json
+
+
+### POST: save a new version
+POST http://localhost:5000/save-version
+Content-Type: application/json
+
+{
+  "text": "React JS is a UI librabry"
+}
+
+
+### POST: save another version
+POST http://localhost:5000/save-version
+Content-Type: application/json
+
+{
+  "text": "Node Js is a runtime environment for javscript"
+}
+
+### POST: invalid request (for testing error handling)
+POST http://localhost:5000/save-version
+Content-Type: application/json
+
+{
+  "wrong_key": "{random: value}"
+}
