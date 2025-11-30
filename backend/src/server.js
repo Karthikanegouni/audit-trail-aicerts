@@ -6,12 +6,13 @@ import auditRoutes from './routes/auditRoutes.js'
 dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 5000
+const frontendURL = process.env.CLIENT_URL
 
 app.use(express.json())
 
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: frontendURL,
     allowedHeaders: ['content-type'],
     methods: ['POST', 'GET'],
   })
