@@ -19,7 +19,7 @@ const LogItem = ({ data }) => {
       <p className="flex gap-2 whitespace-pre ">
         <span className="font-semibold whitespace-pre">Removed words: </span>
         {removedWords.length !== 0 ? (
-          <WordItems removed words={removedWords} />
+          <WordItems removed={true} words={removedWords} />
         ) : (
           'No words were removed'
         )}
