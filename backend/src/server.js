@@ -12,7 +12,7 @@ app.use(express.json())
 
 app.use(
   cors({
-    origin: frontendURL || 'https://audit-trail-aicerts.netlify.app/',
+    origin: frontendURL,
     allowedHeaders: ['content-type'],
     methods: ['POST', 'GET'],
   })
