@@ -1,14 +1,16 @@
+import { useState } from 'react'
 import AuditLogs from '../components/AuditLogs'
 import InputForm from '../components/InputForm'
 
 const Home = () => {
+  const [onLogUpdate, setRefresh] = useState(0)
   return (
-    <main className="bg-linear-to-b from-purple-200 to-zinc-100 min-h-screen py-10 px-4">
+    <main className="min-h-screen py-10 px-4 bg-linear-to-t from-purple-200 to-zinc-200">
       <h1 className="text-center text-xl font-bold" aria-label="title">
-        Content Logs
+        Audit Logs
       </h1>
-      <InputForm />
-      <AuditLogs />
+      <InputForm setRefresh={() => setRefresh((prev) => prev + 1)} />
+      <AuditLogs onLogUpdate={onLogUpdate} />
     </main>
   )
 }

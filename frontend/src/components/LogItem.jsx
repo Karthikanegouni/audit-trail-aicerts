@@ -8,7 +8,7 @@ const LogItem = ({ data }) => {
         <span className="font-semibold">TimeStamp:</span>
         {timestamp}
       </p>
-      <p className="flex gap-2">
+      <p className="flex gap-2 whitespace-pre">
         <span className="font-semibold whitespace-pre">Added words: </span>{' '}
         {addedWords.length !== 0 ? (
           <WordItems words={addedWords} />
@@ -16,7 +16,7 @@ const LogItem = ({ data }) => {
           'No words were Added'
         )}
       </p>
-      <p className="flex gap-2">
+      <p className="flex gap-2 whitespace-pre ">
         <span className="font-semibold whitespace-pre">Removed words: </span>
         {removedWords.length !== 0 ? (
           <WordItems removed words={removedWords} />
